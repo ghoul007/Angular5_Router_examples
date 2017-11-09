@@ -6,10 +6,16 @@ import { RouterModule, Routes } from '@angular/router';
 import { ArticleComponent } from './article/article.component';
 import { HomeComponent } from './home/home.component';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
+import { ArticleListComponent } from './article/article-list/article-list.component';
+import { ArticleDetailsComponent } from './article/article-details/article-details.component';
 
 
 const appRoutes: Routes = [
-  {path: 'article', component: ArticleComponent},
+  {path: 'article', component: ArticleComponent,
+  children: [
+    {path: '', component: ArticleListComponent},
+    {path: ':articleId', component: ArticleDetailsComponent}
+  ]},
   {path: '**', component: HomeComponent},
 ];
 
@@ -18,7 +24,9 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     ArticleComponent,
-    HomeComponent
+    HomeComponent,
+    ArticleListComponent,
+    ArticleDetailsComponent
   ],
   imports: [
     BrowserModule,

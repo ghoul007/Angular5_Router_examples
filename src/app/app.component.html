@@ -1,5 +1,15 @@
 <a [routerLink]="['']">Default</a>
 <a [routerLink]="['article']">Article</a>
+
+<br>
+<a [routerLink]="['']"
+[routerLinkActive]="'active-navlink'"
+[routerLinkActiveOptions]="{exact:true}">Default</a>
+<a [routerLink]="['article']"
+[routerLinkActive]="'active-navlink'"
+[routerLinkActiveOptions]="{exact:true}">Article</a>
+
+
 <router-outlet></router-outlet>
 
 <button (click)="visitDefault()">Default</button>

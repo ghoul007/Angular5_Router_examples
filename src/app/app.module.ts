@@ -3,16 +3,21 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { RouterModule, Routes } from '@angular/router';
+import { ArticleComponent } from './article/article.component';
+import { HomeComponent } from './home/home.component';
 
 
 const appRoutes: Routes = [
-  {path: '**', component: AppComponent}
+  {path: 'article', component: ArticleComponent},
+  {path: '**', component: HomeComponent},
 ];
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ArticleComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

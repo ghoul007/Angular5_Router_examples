@@ -1,16 +1,19 @@
-<a [routerLink]="['']">Default</a>
+<!-- <a [routerLink]="['']">Default</a>
+<a [routerLink]="['login']">Login</a>
 <a [routerLink]="['article']">Article</a>
 
+<hr> -->
 <br>
-<a [routerLink]="['']"
-[routerLinkActive]="'active-navlink'"
-[routerLinkActiveOptions]="{exact:true}">Default</a>
-<a [routerLink]="['article']"
-[routerLinkActive]="'active-navlink'"
-[routerLinkActiveOptions]="{exact:true}">Article</a>
+<a [routerLink]="['login']" [routerLinkActive]="'active-navlink'" [routerLinkActiveOptions]="{exact:true}">Login</a>
 
+<a [routerLink]="['']" [routerLinkActive]="'active-navlink'" [routerLinkActiveOptions]="{exact:true}">Default</a>
+<a [routerLink]="['article']" [routerLinkActive]="'active-navlink'" [routerLinkActiveOptions]="{exact:true}">Article</a>
+<hr>
 
-<router-outlet></router-outlet>
+<div class="container">
+
+    <router-outlet></router-outlet>
+</div>
 
 <button (click)="visitDefault()">Default</button>
 <button (click)="visitArticle()">Article</button>

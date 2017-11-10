@@ -1,4 +1,9 @@
+.container {
+    height: 80vh;
+    width: 100%
+}
+
 .active-navlink {
-  color: red;
-  text-transform: uppercase;
+    color: red;
+    text-transform: uppercase;
 }

@@ -1,0 +1,3 @@
+<h1>{{(loginIn==true)?'Connect':'Non Connect'}}</h1>
+<button *ngIf="!loginIn" class="btn btn-success" (click)="login()">login</button>
+<button *ngIf="loginIn" class="btn btn-success" (click)="logout()">logout</button>
